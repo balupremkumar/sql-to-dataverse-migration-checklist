@@ -1,0 +1,9 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Applies to the text and documents in this repository: README.md, data-type-map.md, inventory-template.csv.
+The scripts (inventory.sql, Map-SqlSchemaToDataverse.ps1) are under the MIT License in LICENSE.
+
+You are free to share and adapt this material for any purpose, including commercially, as long as you give appropriate credit.
+Attribution: "SQL Server and Access migration checklist, Kove, kove.nz/sql-migration-checklist".
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode

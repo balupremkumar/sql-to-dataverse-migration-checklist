@@ -102,9 +102,8 @@ The full guide: [Moving an Access database into SharePoint or Dataverse](https:/
 
 ## Licence
 
-The checklist and documents are CC BY 4.0: copy them freely, with a link to kove.nz.
-The scripts are MIT.
-See `LICENSE`.
+The checklist and documents are CC BY 4.0 (`LICENSE-docs`): copy them freely, with a link to kove.nz.
+The scripts are MIT (`LICENSE`).
 
 Balu Premkumar, [Kove](https://kove.nz), Christchurch, New Zealand.
 I move SQL Server, Access and spreadsheet systems into Microsoft 365 for firms with 5 to 50 staff, at a fixed price, with the source handed over.

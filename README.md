@@ -21,6 +21,35 @@ Version 1, September 2026.
 The web version, with the reasoning behind each section, is at [kove.nz/sql-migration-checklist](https://kove.nz/sql-migration-checklist).
 Prices are Microsoft's New Zealand list prices before GST, checked September 2026.
 
+## How to run
+
+### Running inventory.sql
+
+The inventory.sql script answers items 1 to 4 and 8 for SQL Server. It runs without making any changes.
+
+1. Open SQL Server Management Studio, Azure Data Studio, or connect via sqlcmd to your SQL Server instance.
+2. For the whole instance (version, edition, list of databases), paste Part A of inventory.sql and run it. Any database connection works.
+3. For your production database, switch to it and paste Part B of inventory.sql, starting from the `USE [YourProductionDatabase];` line. Edit the USE line to match your database name.
+4. Run each query section (B1 through B7) and save or export the results.
+5. If a query fails on permissions, note the gap. The rest will still run. The queries are read-only and need VIEW SERVER STATE and read access to msdb.
+
+### Running the PowerShell mapper
+
+The Map-SqlSchemaToDataverse.ps1 script maps every column in your database to a suggested Dataverse column type and notes warnings (items 19 to 23).
+
+1. Open PowerShell 5.1 or PowerShell 7 on Windows.
+2. Navigate to the folder where Map-SqlSchemaToDataverse.ps1 lives.
+3. Run the script with your server and database:
+   ```
+   .\Map-SqlSchemaToDataverse.ps1 -Server "SERVER01\SQLEXPRESS" -Database Jobs
+   ```
+4. If your server uses SQL login instead of Windows authentication, add the credential flag:
+   ```
+   .\Map-SqlSchemaToDataverse.ps1 -Server "SERVER01\SQLEXPRESS" -Database Jobs -Credential (Get-Credential)
+   ```
+5. The script creates a CSV file named `Jobs-dataverse-map.csv` in your current folder (or specify a different path with `-OutFile C:\temp\jobs-map.csv`).
+6. Open the CSV and fill in the DisplayName column (what each column means) and StillUsed (whether it is still used). Hand this sheet to whoever quotes.
+
 ## 1. Inventory (before anyone quotes)
 
 1. Exact version and edition of SQL Server (`SELECT @@VERSION`) or Access, and the Windows Server underneath. Check both against the [end-of-support dates](https://kove.nz/microsoft-end-of-support-dates).

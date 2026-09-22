@@ -1,8 +1,8 @@
 # SQL Server and Access to Dataverse: migration checklist for a small business
 
-Thirty-eight checks, in the order they happen, for moving the database that runs a 5 to 20 person firm into Microsoft 365 (SharePoint lists or Dataverse).
-It is the list I work from.
-Take it to whoever you hire, including someone who is not me.
+For firms with 5 to 20 staff moving a SQL Server or Access database into Microsoft 365 SharePoint or Dataverse. [See the web version with full reasoning](https://kove.nz/sql-migration-checklist).
+
+Thirty-eight checks in the order they happen. It is the list I work from. Take it to whoever you hire, including someone who is not me.
 
 Every item is a yes or no.
 A provider who cannot answer sections 1 to 3 before quoting is guessing at the price.
@@ -18,7 +18,6 @@ What is in this repo:
 | `inventory-template.csv` | The section 1 sheet, blank |
 
 Version 1, September 2026.
-The web version, with the reasoning behind each section, is at [kove.nz/sql-migration-checklist](https://kove.nz/sql-migration-checklist).
 Prices are Microsoft's New Zealand list prices before GST, checked September 2026.
 
 ## How to run
